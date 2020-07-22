@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="home-box1">
+  <view>今日收益</view>
+  <view class="mun">28.68</view>
+</view>
+<scroll-view scroll-x class='top_1'>
+  <view class='content_1'>
+    <view class='content_1_item'>
+      <view>
+        <view>2020/06/20</view>
+        <view class="mun1"><view>￥</view>16.58</view>
+      </view>
+      <view>
+        <image mode="widthFix"  src="./../../images/sy.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='content_1' style="padding-right:30rpx;">
+    <view class='content_1_item' style="background:#ff9734">
+      <view>
+        <view>2020/06/19</view>
+        <view class="mun1"><view>￥</view>18.58</view>
+      </view>
+      <view>
+        <image mode="widthFix" src="./../../images/sy.png"></image>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>
+<view class="title">
+   <view>晚安家居(83358574)</view>
+   <image src="./../../images/wifi.jpg"></image>
+   <view style="flex:1"></view>
+   <view>￥ 16.66</view>
+</view>
+<view class="card">
+  <view wx:for="{{6}}" class="row" style="border-bottom:{{index==7?'none':'1px solid #eeeeee'}}">
+    <view>12:00-13:00</view>
+    <view>￥123</view>
+  </view>
+</view>
+
+<view class="title">
+   <view>晚安家居(83358574)</view>
+   <image src="./../../images/danger.jpg"></image>
+   <view style="flex:1"></view>
+   <view>￥ 16.66</view>
+</view>
+<view class="card">
+  <view wx:for="{{6}}" class="row" style="border-bottom:{{index==7?'none':'1px solid #eeeeee'}}">
+    <view>12:00-13:00</view>
+    <view>￥123</view>
+  </view>
+</view>

@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/profit/profit",
+    "pages/center/center",
+    "pages/popularize/popularize",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/message/message",
+    "pages/equipment/equipment"
+    
+  ],
+  "tabBar": {
+    "selectedColor": "#625fdb",
+    "color": "#aaaaaa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "./images/bottom1.png",
+        "selectedIconPath": "./images/bottom1_s.png"
+      },
+      {
+        "pagePath": "pages/popularize/popularize",
+        "text": "能量",
+        "iconPath": "./images/bottom2.png",
+        "selectedIconPath": "./images/bottom2_s.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "商户中心",
+        "iconPath": "./images/bottom3.png",
+        "selectedIconPath": "./images/bottom3_s.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#625fdb",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

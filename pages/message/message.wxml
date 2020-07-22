@@ -1,0 +1,194 @@
+<!--pages/message/message.wxml-->
+<view class="row">
+  <view class="title">地区</view>
+  <view style="flex:1"></view>
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+    <view class="text">
+      {{region[0]}}{{region[1]}}{{region[2]}}
+    </view>
+  </picker>
+  <image src="./../../images/arrow.png"></image>
+</view>
+<view class="row">
+  <view class="title">商户名称</view>
+  <view style="flex:1"></view>
+  <view class="text">
+   <input placeholder-class="text" placeholder="请输入企业名称" style="text-align:right;margin-right:30rpx;" value="{{nameOfEnterprise}}" bindinput="handleInputNameOfEnterprise"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+<view class="row">
+  <view class="title">商户编号</view>
+  <view style="flex:1"></view>
+  <view class="text">
+    <input placeholder-class="text" placeholder="请输入企业编号" style="text-align:right;margin-right:30rpx;" value="{{numberOfEnterprise}}" bindinput="handleInputNumberOfEnterprise"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+<view class="row">
+  <view class="title">所属行业</view>
+  <view style="flex:1"></view>
+  <!-- <view class="text">商超 - 零售</view> -->
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="text">
+      {{multiArray[0][multiIndex[0]]}}-{{multiArray[1][multiIndex[1]]}}
+    </view>
+  </picker>
+  <image src="./../../images/arrow.png"></image>
+</view>
+<view style="height:20rpx;"></view>
+<view class="row">
+  <view class="title">商户简称</view>
+  <view style="flex:1"></view>
+  <view class="text">
+    <input placeholder-class="text" placeholder="请输入商户简称" style="text-align:right;margin-right:30rpx;" value="{{merchantName}}" bindinput="handleInputMerchantName"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+<view class="row">
+  <view class="title">商家照片</view>
+  <view style="flex:1"></view>
+  <view class="text">5</view>
+  <image src="./../../images/arrow.png"></image>
+</view>
+<view class="row">
+  <view class="title">商家类型</view>
+  <view style="flex:1"></view>
+  <!-- <view class="text">个体工商户</view> -->
+  <picker bindchange="bindPickerMerchantTypeChange" value="{{merchantTypeIndex}}" range="{{merchantTypeList}}">
+    <view class="text">
+      {{merchantTypeList[merchantTypeIndex]}}
+    </view>
+  </picker>
+  <image src="./../../images/arrow.png"></image>
+</view>
+<view style="height:20rpx;"></view>
+<view class="row">
+  <view class="title">法定代表人</view>
+  <view style="flex:1"></view>
+  <view class="text">
+    <input placeholder-class="text" placeholder="请输入法定代表人" style="text-align:right;margin-right:30rpx;" value="{{name}}" bindinput="handleInputName"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+<view class="row">
+  <view class="title">经营范围</view>
+  <view style="flex:1"></view>
+  <view class="text">
+    <input placeholder-class="text" placeholder="请输入经营范围" style="text-align:right;margin-right:30rpx;" value="{{range}}" bindinput="handleRange"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+<view class="row">
+  <view class="title">成立日期</view>
+  <view style="flex:1"></view>
+  <!-- <view class="text">2018-03-21</view> -->
+   <picker mode="date" value="{{date}}" start="1900-01-01" end="2030-12-31" bindchange="bindDateChange">
+    <view class="text">
+      {{date}}
+    </view>
+  </picker>
+  <image src="./../../images/arrow.png"></image>
+</view>
+<view class="row">
+  <view class="title">经营期限</view>
+  <view style="flex:1"></view>
+  <view class="text">
+    <input placeholder-class="text" placeholder="请输入经营期限" style="text-align:right;margin-right:30rpx;" value="{{rangeTime}}" bindinput="handleRangeTime"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+<view style="height:20rpx;"></view>
+<view class="row">
+  <view class="title">注册资本(万)</view>
+  <view style="flex:1"></view>
+  <view class="text">
+    <input placeholder-class="text" placeholder="请输入注册资本" type="number" style="text-align:right;margin-right:30rpx;" value="{{money}}" bindinput="handleMoney"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+<view class="row">
+  <view class="title">注册地址</view>
+  <view style="flex:1"></view>
+  <view class="text">
+    <input placeholder-class="text" placeholder="请输入注册地址" style="text-align:right;margin-right:30rpx;" value="{{registerAddress}}" bindinput="handleRegisterAddress"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+<view class="row">
+  <view class="title">经营地址</view>
+  <view style="flex:1"></view>
+  <view class="text">
+    <input placeholder-class="text" placeholder="请输入经营地址" style="text-align:right;margin-right:30rpx;" value="{{managementAddress}}" bindinput="handleManagementAddress"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+<view class="row">
+  <view class="title">登记机关</view>
+  <view style="flex:1"></view>
+  <view class="text">
+    <input placeholder-class="text" placeholder="请输入登记机关" style="text-align:right;margin-right:30rpx;" value="{{registrationAuthority}}" bindinput="handleRegistrationAuthority"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+<view style="height:20rpx;"></view>
+  <view class="row">
+  <view class="title">代理时间</view>
+  <view style="flex:1"></view>
+  <!-- <view class="text">2018-03-21</view> -->
+   <picker mode="date" value="{{agentDate}}" start="1900-01-01" end="2030-12-31" bindchange="bindAgentDate">
+    <view class="text">
+      {{agentDate}}
+    </view>
+  </picker>
+  <image src="./../../images/arrow.png"></image>
+</view>
+<view class="row">
+  <view class="title">代理期限</view>
+  <view style="flex:1"></view>
+  <picker mode="date" value="{{agentEnd}}" start="1900-01-01" end="2030-12-31" bindchange="bindAgentEnd">
+    <view class="text">
+      {{agentEnd}}
+    </view>
+  </picker>
+  <image src="./../../images/arrow.png"></image>
+</view>
+<view style="height:20rpx;"></view>
+<view class="row">
+  <view class="title">联系人</view>
+  <view style="flex:1"></view>
+  <view class="text">
+    <input placeholder-class="text" placeholder="请输入联系人姓名" style="text-align:right;margin-right:30rpx;" value="{{contactsName}}" bindinput="handleContactsName"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+<view class="row">
+  <view class="title">联系电话</view>
+  <view style="flex:1"></view>
+  <view class="text">
+     <input placeholder-class="text" placeholder="请输入联系人电话" style="text-align:right;margin-right:30rpx;" value="{{contactsPhone}}" bindinput="handleContactsPhone"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+<view class="row">
+  <view class="title">个人银行卡</view>
+  <view style="flex:1"></view>
+  <view class="text">
+     <input placeholder-class="text" placeholder="请输入个人银行卡" style="text-align:right;margin-right:30rpx;" value="{{contactsCard}}" bindinput="handleContactsCard"></input>
+  </view>
+  <!-- <image src="./../../images/arrow.png"></image> -->
+</view>
+
+<view catchtap="handleUploadLicense" class="card">
+  <image src="./../../images/add_s.png"></image>
+  <view>上传营业执照副本</view>
+</view>
+<view catchtap="handleUploadFront" class="card">
+  <image src="./../../images/sfz_z.png"></image>
+  <view>上传身份证正面</view>
+</view>
+<view catchtap="handleUploadReverse" class="card">
+  <image src="./../../images/sfz_f.png"></image>
+  <view>上传身份证反面</view>
+</view>
+<view class="btn">提交审核资料</view>

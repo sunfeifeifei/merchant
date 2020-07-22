@@ -1,0 +1,114 @@
+/**index.wxss**/
+page{
+  background: #625fdb;
+}
+.home-box1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 16rpx;
+  color: #fff;
+  flex-flow: column;
+  height: 260rpx;
+}
+.mun{
+  font-size:90rpx;
+  font-weight: 500;
+  margin-top: 10rpx;
+}
+.top_1_1{
+  position: fixed;
+  top: 0;
+  z-index: 2222;
+  width: 100%;
+  background: white;
+  /* visibility: hidden; */
+  /* visibility: visible; */
+}
+.top_1{
+  width: 100%;
+  white-space: nowrap;
+}
+::-webkit-scrollbar {
+width: 0;
+height: 0;
+color: transparent;
+display: none;
+}
+.space_1{
+  flex: 1;
+}
+.content_1_item image{
+   height: auto;
+   width:200rpx;
+   position: absolute;
+   right: -12rpx;
+   bottom: -64rpx;
+}
+.content_1{
+  display: inline-block;
+  font-size: 26rpx;
+  text-align: center;
+  color: #555555;
+  padding: 0 0 0 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 16rpx;
+}
+.content_1_item{
+  overflow: hidden;
+  position: relative;
+  padding:40rpx 30rpx;
+  justify-content: space-between;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to right, #ff345f , #ff345f);
+  width: 460rpx;
+  border-radius: 16rpx;
+  box-sizing: border-box;
+}
+.mun1{
+  font-size:50rpx;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 30rpx;
+}
+.mun1 view{
+  font-size: 30rpx;
+  font-weight: 400;
+  margin-right: 12rpx;
+  margin-bottom: 8rpx;
+}
+.title{
+  font-size: 32rpx;
+  margin: 0 30rpx;
+  font-weight: 500;
+  margin-top: 50rpx;
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+}
+.title image{
+  width: 40rpx;
+  height: 30rpx;
+  margin-left: 6rpx;
+}
+.card{
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding:6rpx 30rpx;
+  margin: 30rpx;
+  box-sizing: border-box;
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #222222;
+  font-size: 30rpx;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eeeeee;
+}

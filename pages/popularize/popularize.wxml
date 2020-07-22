@@ -1,0 +1,67 @@
+<!--pages/popularize/popularize.wxml-->
+<view class="top">
+  <view>推广码</view>
+  <image src="./../../images/s14.jpg"></image>
+</view>
+<view class="title">推广收益</view>
+<view data-item="{{item}}" catchtap="handleItem" class="row" wx:for="{{3}}" wx:key="index">
+  <view>2020-06-17</view>
+  <view style="flex:1"></view>
+  <view>￥19.00</view>
+  <image src="./../../images/arrow.png"></image>
+</view>
+
+
+<!-- 模态框  -->
+<!--mask-->
+<view class="drawer_screen1" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box1" wx:if="{{showModalStatus}}">
+  <!--drawer content-->
+  <view class="drawer_content1">
+    <view class="detail-row">
+      <view class="detail-title">客户信息：</view>
+      <view class="detail-value">xxx专卖店</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">客户编号：</view>
+      <view class="detail-value">68985748</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">通讯地址：</view>
+      <view class="detail-value">湖北省红安县城关区红坪大道125号</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">行业分类：</view>
+      <view class="detail-value">家居建材-家具</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">广告信息：</view>
+      <view class="detail-value">晚安家具/587875477</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">广告时长：</view>
+      <view class="detail-value">20s</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">投放屏幕：</view>
+      <view class="detail-value">100</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">计费方式：</view>
+      <view class="detail-value">包月收费</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">收费金额：</view>
+      <view class="detail-value">199/月</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">投放时间：</view>
+      <view class="detail-value">2020-06-20</view>
+    </view>
+  </view>
+  <view class='btn_x1'>
+    <image bindtap="powerDrawer" data-statu="close" src='{{ img }}/images/delete.png'></image>
+  </view>
+</view>

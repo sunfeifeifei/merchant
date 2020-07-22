@@ -1,0 +1,85 @@
+<!--pages/profit/profit.wxml-->
+<view class="card">
+  <image class="icon" src="./../../images/center_icon.png"></image>
+  <view class="card-right">
+    <view class="name">晚安家私（66311909）</view>
+    <view style="flex:1"></view>
+    <view class="des">总资产(元)</view>
+    <view class="money">1985.00</view>
+  </view>
+</view>
+<view style="height:24rpx"></view>
+<view class="row row1">
+  <image src="./../../images/s10.jpg"></image>
+  <view>收益提现</view>
+  <view style="flex:1"></view>
+  <view class="row-right">
+    <view class="des1">可提现金额</view>
+    <view>921.00</view>   
+  </view>  
+</view>
+<view class="row row2">
+  <image src="./../../images/s11.jpg"></image>
+  <view>冻结金额</view>
+  <view style="flex:1"></view>
+  <view class="row-right">
+    <view class="des2">代理设备数</view>
+    <view>1000.00</view>
+  </view>  
+</view>
+<view style="height:1px"></view>
+<view class="title">最近记录</view>
+<view class="card-box">
+
+  <view class="card-row">
+    <image src="./../../images/s12.jpg"></image>
+    <view>
+      <view>转账至银行卡</view>
+      <view class="time">2020-06-10</view>
+    </view>
+    <view style="flex:1"></view>
+    <view>-1200.00</view>
+  </view>
+
+  <view class="card-row">
+    <image src="./../../images/s13.jpg"></image>
+    <view>
+      <view>设备盈利</view>
+      <view class="time">2020-06-10</view>
+    </view>
+    <view style="flex:1"></view>
+    <view>+12.00</view>
+  </view>
+
+  <view class="card-row">
+    <image src="./../../images/s13.jpg"></image>
+    <view>
+      <view>设备盈利</view>
+      <view class="time">2020-06-10</view>
+    </view>
+    <view style="flex:1"></view>
+    <view>+12.00</view>
+  </view>
+
+  <view class="card-row">
+    <image src="./../../images/s13.jpg"></image>
+    <view>
+      <view>设备盈利</view>
+      <view class="time">2020-06-10</view>
+    </view>
+    <view style="flex:1"></view>
+    <view>+12.00</view>
+  </view>
+
+  <view class="card-row">
+    <image src="./../../images/s13.jpg"></image>
+    <view>
+      <view>设备盈利</view>
+      <view class="time">2020-06-10</view>
+    </view>
+    <view style="flex:1"></view>
+    <view>+12.00</view>
+  </view>
+
+
+</view>

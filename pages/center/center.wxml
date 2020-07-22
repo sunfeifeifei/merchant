@@ -1,0 +1,44 @@
+<!--pages/center/center.wxml-->
+<view class="card">
+  <image class="icon" src="./../../images/center_icon.png"></image>
+  <view class="card-right">
+    <view class="name">晚安家私（66311909）</view>
+    <view class="des">家居建材-家具/办公用品</view>
+    <image class="status" mode="widthFix" src="./../../images/center_bg.png"></image>
+  </view>
+</view>
+<view style="height:30rpx"></view>
+<view style="border-radius: 16rpx;overflow: hidden;">
+  
+  <view data-tag="1" catchtap="handleNav" class="row">
+  <image class="row-img-left" src="./../../images/s1.jpg"></image>
+  <view>基础信息认证</view>
+  <view style="flex:1"></view>
+  <image class="row-img-right" src="./../../images/arrow.png"></image>
+</view>
+<view data-tag="2" catchtap="handleNav"  class="row">
+  <image class="row-img-left" src="./../../images/s2.jpg"></image>
+  <view>我的设备</view>
+  <view style="flex:1"></view>
+  <image class="row-img-right" src="./../../images/arrow.png"></image>
+</view>
+<view data-tag="3" catchtap="handleNav"  class="row">
+  <image class="row-img-left" src="./../../images/s3.jpg"></image>
+  <view>收益流水</view>
+  <view style="flex:1"></view>
+  <image class="row-img-right" src="./../../images/arrow.png"></image>
+</view>
+<view data-tag="4" catchtap="handleNav"  class="row">
+  <image class="row-img-left" src="./../../images/s4.jpg"></image>
+  <view>收益提现</view>
+  <view style="flex:1"></view>
+  <image class="row-img-right" src="./../../images/arrow.png"></image>
+</view>
+<view data-tag="5" catchtap="handleNav"  class="row">
+  <image class="row-img-left" src="./../../images/s5.jpg"></image>
+  <view>联系我们</view>
+  <view style="flex:1"></view>
+  <image class="row-img-right" src="./../../images/arrow.png"></image>
+</view>
+
+</view>
