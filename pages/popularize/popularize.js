@@ -10,11 +10,11 @@ Page({
   },
 
   handleItem(e){
-    console.log(e.currentTarget.dataset.item);
+    console.log('--当前点击--',e.currentTarget.dataset.item);
     this.util(this, 'open');
   },
 
-  powerDrawer(e) {
+  powerDrawer() {
     this.util(this, 'close');
   },
 

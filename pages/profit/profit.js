@@ -5,14 +5,73 @@ Page({
    * 页面的初始数据
    */
   data: {
+    navIndex:0,
+    list:[],
+  },
+  
+  handleItem(e){
+    this.setData({
+      navIndex: e.currentTarget.dataset.index,
+      list: [
+        {
+          time: '13:00-14:00',
+          count: Math.floor(Math.random() * 100)
+        },
+        {
+          time: '12:00-14:00',
+          count: Math.floor(Math.random() * 100)
+        },
+        {
+          time: '14:00-15:00',
+          count: Math.floor(Math.random() * 100)
+        },
+        {
+          time: '17:00-20:00',
+          count: Math.floor(Math.random() * 100)
+        },
+        {
+          time: '20:00-21:00',
+          count: Math.floor(Math.random() * 100)
+        }
+      ]
+    });
+  },
 
+  handleToDetail(e){
+    let item = e.currentTarget.dataset.item;
+    wx.navigateTo({
+      url: '/pages/profitDetail/profitDetail?item='+JSON.stringify(item),
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad(options) {
+    this.setData({
+      list:[
+        {
+          time:'13:00-14:00',
+          count:215
+        },
+        {
+          time: '12:00-14:00',
+          count: 200
+        },
+        {
+          time: '14:00-15:00',
+          count: 169
+        },
+        {
+          time: '17:00-20:00',
+          count: 215
+        },
+        {
+          time: '20:00-21:00',
+          count: 215
+        }
+      ]
+    }); 
   },
 
   /**

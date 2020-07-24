@@ -14,7 +14,7 @@
 
 <!-- 模态框  -->
 <!--mask-->
-<view class="drawer_screen1" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<view class="drawer_screen1" bindtap="powerDrawer" wx:if="{{showModalStatus}}"></view>
 <!--content-->
 <!--使用animation属性指定需要执行的动画-->
 <view animation="{{animationData}}" class="drawer_box1" wx:if="{{showModalStatus}}">
@@ -62,6 +62,6 @@
     </view>
   </view>
   <view class='btn_x1'>
-    <image bindtap="powerDrawer" data-statu="close" src='{{ img }}/images/delete.png'></image>
+    <image bindtap="powerDrawer" src='{{ img }}/images/delete.png'></image>
   </view>
 </view>

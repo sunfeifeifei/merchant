@@ -1,0 +1,24 @@
+<!--pages/profitDetail/profitDetail.wxml-->
+<view class="top">
+  <view>
+    <picker mode="date" value="{{date}}" start="1900-01-01" end="2030-12-31" bindchange="bindDateChange">
+      <view class="picker">
+        <image mode="widthFix" src="./../../images/date.png"></image>
+        <view>{{date}}</view>
+      </view>
+    </picker>
+  </view>
+
+   <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+    {{array[index]}}
+    <image style="margin-right:0" mode="widthFix" src="./../../images/arrow_up.png"></image>
+  </view>
+  </picker>
+
+</view>
+
+<view class="bottom">
+  <view class="left"></view>
+  <view class="right"></view>
+</view>

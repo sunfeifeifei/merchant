@@ -8,130 +8,27 @@
     <view class="money">1985.00</view>
   </view>
 </view>
-<view style="height:24rpx"></view>
-<view class="row row1">
-  <image src="./../../images/s10.jpg"></image>
-  <view>收益提现</view>
-  <view style="flex:1"></view>
-  <view class="row-right">
-    <view class="des1">可提现金额</view>
-    <view>921.00</view>   
-  </view>  
-</view>
-<view class="row row2">
-  <image src="./../../images/s11.jpg"></image>
-  <view>冻结金额</view>
-  <view style="flex:1"></view>
-  <view class="row-right">
-    <view class="des2">代理设备数</view>
-    <view>1000.00</view>
-  </view>  
-</view>
-<view style="height:1px"></view>
-<view class="title">最近记录</view>
-<view class="card-box">
 
-  <view class="card-row">
-    <image src="./../../images/s12.jpg"></image>
-    <view>
-      <view>转账至银行卡</view>
-      <view class="time">2020-06-10</view>
+<scroll-view scroll-x class='top_1'>
+  <view wx:for="{{10}}" wx:key="key" class='content_1'>
+    <view data-index="{{index}}" catchtap="handleItem" class='content_1_item' style="color:{{navIndex==index?'#333333':'#aaaaaa'}}">
+      <view>2020-06-15</view>
+      <view class="my-money">￥22.25</view>
+      <view style="visibility:{{navIndex==index?'visible':'hidden'}}" class="line"></view>
     </view>
+  </view>
+</scroll-view>
+
+<view class="my-bottom">
+  <view class="my-row">
+    <view>时段</view>
+    <view>播放次数</view>
+  </view>
+   <view data-item="{{item}}" catchtap="handleToDetail" wx:for="{{list}}" wx:key="key" class="my-row">
+    <view>{{item.time}}</view>
     <view style="flex:1"></view>
-    <view>-1200.00</view>
+    <view>{{item.count}}</view>
+    <image src="./../../images/arrow.png"></image>
   </view>
 
-  <view class="card-row">
-    <image src="./../../images/s13.jpg"></image>
-    <view>
-      <view>设备盈利</view>
-      <view class="time">2020-06-10</view>
-    </view>
-    <view style="flex:1"></view>
-    <view>+12.00</view>
-  </view>
-
-  <view class="card-row">
-    <image src="./../../images/s13.jpg"></image>
-    <view>
-      <view>设备盈利</view>
-      <view class="time">2020-06-10</view>
-    </view>
-    <view style="flex:1"></view>
-    <view>+12.00</view>
-  </view>
-
-  <view class="card-row">
-    <image src="./../../images/s13.jpg"></image>
-    <view>
-      <view>设备盈利</view>
-      <view class="time">2020-06-10</view>
-    </view>
-    <view style="flex:1"></view>
-    <view>+12.00</view>
-  </view>
-
-  <view class="card-row">
-    <image src="./../../images/s13.jpg"></image>
-    <view>
-      <view>设备盈利</view>
-      <view class="time">2020-06-10</view>
-    </view>
-    <view style="flex:1"></view>
-    <view>+12.00</view>
-  </view>
-</view>
-
-<!-- 模态框  -->
-<!--mask-->
-<view class="drawer_screen1" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
-<!--content-->
-<!--使用animation属性指定需要执行的动画-->
-<view animation="{{animationData}}" class="drawer_box1" wx:if="{{showModalStatus}}">
-  <!--drawer content-->
-  <view class="drawer_content1">
-    <view class="detail-row">
-      <view class="detail-title">客户信息：</view>
-      <view class="detail-value">xxx专卖店</view>
-    </view>
-    <view class="detail-row">
-      <view class="detail-title">客户编号：</view>
-      <view class="detail-value">68985748</view>
-    </view>
-    <view class="detail-row">
-      <view class="detail-title">通讯地址：</view>
-      <view class="detail-value">湖北省红安县城关区红坪大道125号</view>
-    </view>
-    <view class="detail-row">
-      <view class="detail-title">行业分类：</view>
-      <view class="detail-value">家居建材-家具</view>
-    </view>
-    <view class="detail-row">
-      <view class="detail-title">广告信息：</view>
-      <view class="detail-value">晚安家具/587875477</view>
-    </view>
-    <view class="detail-row">
-      <view class="detail-title">广告时长：</view>
-      <view class="detail-value">20s</view>
-    </view>
-    <view class="detail-row">
-      <view class="detail-title">投放屏幕：</view>
-      <view class="detail-value">100</view>
-    </view>
-    <view class="detail-row">
-      <view class="detail-title">计费方式：</view>
-      <view class="detail-value">包月收费</view>
-    </view>
-    <view class="detail-row">
-      <view class="detail-title">收费金额：</view>
-      <view class="detail-value">199/月</view>
-    </view>
-    <view class="detail-row">
-      <view class="detail-title">投放时间：</view>
-      <view class="detail-value">2020-06-20</view>
-    </view>
-  </view>
-  <view class='btn_x1'>
-    <image bindtap="powerDrawer" data-statu="close" src='{{ img }}/images/delete.png'></image>
-  </view>
 </view>

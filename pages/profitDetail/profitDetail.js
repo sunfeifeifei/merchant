@@ -1,39 +1,41 @@
-// pages/center/center.js
+// pages/profitDetail/profitDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    date:'2020-06-16',
+
+    array:['晚安家居(5698585)'],
+    index:0,
+
+    srceenHeight:0,
 
   },
-
-  handleNav(e) {
-    let nav = e.currentTarget.dataset.tag;
-    if (nav == '1') {
-      wx.navigateTo({
-        url: '/pages/message/message',
-      })
-    } else if (nav == '2') {
-      wx.navigateTo({
-        url: '/pages/equipment/equipment',
-      })
-    } else if (nav == '3') {
-      wx.navigateTo({
-        url: '/pages/profit/profit',
-      })
-    } else if (nav == '4') {
-      wx.navigateTo({
-        url: '/pages/withdrawal/withdrawal',
-      })
-    }
+  
+  bindDateChange (e) {
+    this.setData({
+      date: e.detail.value
+    })
+  },
+  
+  bindPickerChange: function (e) {
+    this.setData({
+      index: e.detail.value
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad(options) {
+    this.setData({
+      srceenHeight: wx.getSystemInfoSync().windowHeight
+    },()=>{
+      console.log(this.data.srceenHeight)
+    }); 
+    
   },
 
   /**

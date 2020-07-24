@@ -1,31 +1,48 @@
-// pages/center/center.js
+// pages/profit/profit.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    showModalStatus: false,
   },
 
-  handleNav(e) {
-    let nav = e.currentTarget.dataset.tag;
-    if (nav == '1') {
-      wx.navigateTo({
-        url: '/pages/message/message',
+  handleBtn() {
+
+    this.util(this, 'open');
+  },
+
+  powerDrawer() {
+    this.util(this, 'close');
+  },
+
+  //模态框动画
+  util(that, currentStatu) {
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: "ease-in-out",
+      delay: 0
+    });
+    animation.opacity(0).scale(0).step();
+    that.setData({
+      animationData: animation.export()
+    })
+    setTimeout(function () {
+      animation.opacity(1).scale(1).step();
+      that.setData({
+        animationData: animation
       })
-    } else if (nav == '2') {
-      wx.navigateTo({
-        url: '/pages/equipment/equipment',
-      })
-    } else if (nav == '3') {
-      wx.navigateTo({
-        url: '/pages/profit/profit',
-      })
-    } else if (nav == '4') {
-      wx.navigateTo({
-        url: '/pages/withdrawal/withdrawal',
-      })
+      if (currentStatu == "close") {
+        that.setData({
+          showModalStatus: false
+        });
+      }
+    }.bind(that), 200)
+    if (currentStatu == "open") {
+      that.setData({
+        showModalStatus: true
+      });
     }
   },
 

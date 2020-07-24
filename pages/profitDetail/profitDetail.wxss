@@ -1,0 +1,33 @@
+/* pages/profitDetail/profitDetail.wxss */
+page{
+  background: #615fdc;
+}
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 30rpx;
+}
+.picker{
+  display: flex;
+  align-items: center;
+}
+.picker image{
+  height: auto;
+  width: 36rpx;
+  margin-right: 10rpx;
+}
+.bottom{
+  display: flex;
+}
+
+.left{
+  width: 178rpx;
+}
+.right{
+  flex: 1;
+  background: #3d3aa1;
+}
