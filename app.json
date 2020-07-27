@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/profitDetail/profitDetail",
     "pages/profit/profit",
     "pages/center/center",
     "pages/popularize/popularize",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/message/message",
     "pages/equipment/equipment",

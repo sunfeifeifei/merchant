@@ -11,6 +11,16 @@ Page({
     index:0,
 
     srceenHeight:0,
+    leftNav:0,
+
+  },
+
+  handleTime(e){
+    console.log(e.currentTarget.dataset.item);
+    console.log(e.currentTarget.dataset.index);
+    this.setData({
+      leftNav: e.currentTarget.dataset.index
+    });
 
   },
   
@@ -33,7 +43,7 @@ Page({
     this.setData({
       srceenHeight: wx.getSystemInfoSync().windowHeight
     },()=>{
-      console.log(this.data.srceenHeight)
+      console.log(this.data.srceenHeight);
     }); 
     
   },

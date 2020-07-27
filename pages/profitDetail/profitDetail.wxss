@@ -25,9 +25,41 @@ page{
 }
 
 .left{
-  width: 178rpx;
+  width: 190rpx;
+  height: 100%;
+}
+.left-item{
+  color: #b0aff5;
+  font-size: 26rpx;
+  padding: 26rpx 0;
+  text-align: center;
+}
+.left-item-on{
+  background: #3d3aa1;
+  color: #fcfffd;
 }
 .right{
   flex: 1;
+  height: 100%;
   background: #3d3aa1;
+  border-left: 1px solid #eeeeee;
+  box-sizing: border-box;
 }
+.right-item{
+  margin: 10rpx 22rpx 10rpx 22rpx;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  border-radius: 16rpx;
+}
+.right-price{
+  display: flex;
+  align-items: flex-end;
+}
+.bottom{
+  border-top: 1px solid #eeeeee;
+  display: flex;
+}
+

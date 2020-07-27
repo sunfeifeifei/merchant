@@ -9,16 +9,42 @@
     </picker>
   </view>
 
-   <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
     <view class="picker">
-    {{array[index]}}
-    <image style="margin-right:0" mode="widthFix" src="./../../images/arrow_up.png"></image>
-  </view>
+      {{array[index]}}
+      <image style="margin-right:0" mode="widthFix" src="./../../images/arrow_up.png"></image>
+    </view>
   </picker>
 
 </view>
 
-<view class="bottom">
-  <view class="left"></view>
-  <view class="right"></view>
+<view style="height:{{srceenHeight-51}}px" class="bottom">
+  <view class="left">
+    <scroll-view scroll-y="true" style="height: 100%;">
+      <view data-item="{{item}}" data-index="{{index}}" catchtap="handleTime" wx:for="{{20}}" class="left-item {{leftNav==index?'left-item-on':''}}">
+        07:00-08:00
+      </view>
+    </scroll-view>
+  </view>
+  <view class="right">
+    <scroll-view scroll-y="true" style="height: 100%;">
+      <view style="height:10rpx;"></view>
+      <view wx:for="{{20}}" class="right-item">
+        <image style=" width: 50rpx;height: 50rpx;margin-right:10rpx;" src="./../../images/check.png"></image>
+        <view>
+          <view style="margin-bottom:10rpx;font-size:32rpx;font-weight:600;color:#333333">晚安家居</view>
+          <view style="font-size:26rpx;color:#666666">
+            <image style=" width: 24rpx;height: 24rpx;margin-right:4rpx;" src="./../../images/loading.png"></image>15s
+            <image style=" width: 24rpx;height: 24rpx;margin-right:4rpx;margin-left:12rpx;" src="./../../images/time.png"></image>07:15:32
+          </view>
+        </view>
+        <view style="flex:1"></view>
+        <view class="right-price">
+          <view style="font-size:26rpx;margin-bottom:6rpx;">￥</view>
+          <view style="font-size:38rpx;font-weight:600;color:#333333">0.12</view>
+        </view>
+      </view>
+      <view style="height:10rpx;"></view>
+    </scroll-view>
+  </view>
 </view>
