@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/equipment/equipment",
     "pages/index/index",
     "pages/profitDetail/profitDetail",
     "pages/profit/profit",
@@ -7,7 +8,7 @@
     "pages/popularize/popularize",
     "pages/logs/logs",
     "pages/message/message",
-    "pages/equipment/equipment",
+    
     "pages/withdrawal/withdrawal"
     
   ],

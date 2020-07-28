@@ -29,7 +29,7 @@
   <view class="right">
     <scroll-view scroll-y="true" style="height: 100%;">
       <view style="height:10rpx;"></view>
-      <view wx:for="{{20}}" class="right-item">
+      <view data-item="{{item}}" catchtap="handleItem" wx:for="{{20}}" class="right-item">
         <image style=" width: 50rpx;height: 50rpx;margin-right:10rpx;" src="./../../images/check.png"></image>
         <view>
           <view style="margin-bottom:10rpx;font-size:32rpx;font-weight:600;color:#333333">晚安家居</view>
@@ -46,5 +46,59 @@
       </view>
       <view style="height:10rpx;"></view>
     </scroll-view>
+  </view>
+</view>
+
+<!-- 模态框  -->
+<!--mask-->
+<view class="drawer_screen1" bindtap="powerDrawer" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box1" wx:if="{{showModalStatus}}">
+  <!--drawer content-->
+  <view class="drawer_content1">
+    <view class="detail-row">
+      <view class="detail-title">客户信息：</view>
+      <view class="detail-value">xxx专卖店</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">客户编号：</view>
+      <view class="detail-value">68985748</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">通讯地址：</view>
+      <view class="detail-value">湖北省红安县城关区红坪大道125号</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">行业分类：</view>
+      <view class="detail-value">家居建材-家具</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">广告信息：</view>
+      <view class="detail-value">晚安家具/587875477</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">广告时长：</view>
+      <view class="detail-value">20s</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">投放屏幕：</view>
+      <view class="detail-value">100</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">计费方式：</view>
+      <view class="detail-value">包月收费</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">收费金额：</view>
+      <view class="detail-value">199/月</view>
+    </view>
+    <view class="detail-row">
+      <view class="detail-title">投放时间：</view>
+      <view class="detail-value">2020-06-20</view>
+    </view>
+  </view>
+  <view class='btn_x1'>
+    <image bindtap="powerDrawer" src='{{ img }}/images/delete.png'></image>
   </view>
 </view>

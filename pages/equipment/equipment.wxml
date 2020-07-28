@@ -1,2 +1,31 @@
 <!--pages/equipment/equipment.wxml-->
-<text>pages/equipment/equipment.wxml</text>
+<view wx:for="{{list}}" class="card">
+  <view class="item">
+    <text>设备编号</text>{{item.number}}
+    <view style="flex:1"></view>
+    <view data-item="{{item}}" catchtap="handleSetter" class="setter">设备报修</view>
+    <image class="icon" src="./../../images/help.png"></image>
+  </view>
+  <view class="item">
+    <text>设备地址</text>{{item.address}}
+  </view>
+  <view class="item" style="align-items: flex-start">
+    <view style="flex:1;line-height:52rpx">
+      <view><text>设备质保</text>{{item.warrantyTime}}</view>
+      <view><text>设备状态</text>{{item.status}}</view>
+      <view><text>注册时间</text>{{item.register}}</view>
+      <view><text>活跃时长</text>{{item.activeDuration}}小时</view>
+    </view>
+    <image mode="widthFix" class="bg" src="./../../images/bg2.jpg"></image>
+  </view>  
+</view>
+<view class="card addimg">
+  <image class="img" src="./../../images/add_g.png"></image>
+  <view>添加新设备</view>
+</view>
+<view class="card setterimg">
+  <image class="img" src="./../../images/setter.png"></image>
+  <view>设备维护</view>
+</view>
+<view style="height:40rpx;"></view>
+

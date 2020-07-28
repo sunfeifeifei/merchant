@@ -1,1 +1,50 @@
 /* pages/equipment/equipment.wxss */
+page{
+  background: #615fdc;
+}
+.card{
+  margin: 16rpx 26rpx 0 26rpx;
+  padding: 26rpx;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  color: #757575;
+}
+.icon{
+  width: 36rpx;
+  height: 36rpx;
+}
+.bg{
+  width: 300rpx;
+  height: auto;
+}
+.item{
+  display: flex;
+  align-items: center;
+}
+text{
+  font-weight: 600;
+  color: #333333;
+  padding: 7rpx 0;
+  margin-right:20rpx; 
+}
+.setter{
+  background: #f2f2f2;
+  color: #f66062;
+  font-size: 24rpx;
+  padding: 4rpx 20rpx;
+  border-radius: 8rpx;
+}
+.img{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+}
+.addimg,.setterimg{
+  height: 190rpx;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}

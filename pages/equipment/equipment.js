@@ -5,6 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
+    list:[
+      {
+        number:'52857485',
+        address:'湖北省红安县将军北路',
+        warrantyTime:'2022-06-15',
+        register:'2020-06-15',
+        status:'在线',
+        activeDuration:'1585'
+      },
+      {
+        number: '25874858',
+        address: '湖北省红安县将军北路',
+        warrantyTime: '2023-06-15',
+        register: '2020-03-15',
+        status: '离线',
+        activeDuration: '585'
+      }
+    ],
+  },
+
+  handleSetter(e){
+    console.log(e.currentTarget.dataset.item);
 
   },
 
