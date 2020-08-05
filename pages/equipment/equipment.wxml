@@ -29,3 +29,27 @@
 </view>
 <view style="height:40rpx;"></view>
 
+
+<!-- 模态框  -->
+<!--mask-->
+<view class="drawer_screen1" bindtap="powerDrawer" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box1" wx:if="{{showModalStatus}}">
+  <!--drawer content-->
+  <view class="drawer_content1">
+    <view class="title">设备报修</view>
+    <image mode="widthFix" src="./../../images/s6.jpg"></image>
+    <view class="detail-row" style="padding: 10rpx 0;">
+      <view class="detail-title" style="font-weight:600;color:#333333">设备编号：</view>
+      <view class="detail-value">68985748</view>
+    </view>
+    <view class="detail-row" style="padding: 10rpx 0;">
+      <view class="detail-title" style="font-weight:600;color:#333333">设备地址：</view>
+      <view class="detail-value">湖北省红安县城关区红坪大道125号</view>
+    </view>
+    <view style="font-size:26rpx;color:#999999;text-align: center;padding:50rpx 0">
+      您的设备报修申请已经提交，我们将尽快安排线下维护人员与您联系，请耐心等待
+    </view>
+  </view>
+</view>

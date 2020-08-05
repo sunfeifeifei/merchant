@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/equipment/equipment",
     "pages/index/index",
+    "pages/equipment/equipment",
+    
     "pages/profitDetail/profitDetail",
     "pages/profit/profit",
     "pages/center/center",
