@@ -27,6 +27,10 @@ Page({
     contactsName: '',
     contactsPhone: '',
     contactsCard:'',
+
+    licenseImage: '',
+    front: '',
+    reverse: '',
   },
 
   bindRegionChange(e) {
@@ -132,8 +136,12 @@ Page({
 
   handleUploadLicense() {
     wx.chooseImage({
-      success(res) {
-        const tempFilePaths = res.tempFilePaths
+      count: 1,
+      success: (res) => {
+        const tempFilePaths = res.tempFilePaths;
+        this.setData({
+          licenseImage: res.tempFilePaths[0]
+        });
         wx.uploadFile({
           url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
           filePath: tempFilePaths[0],
@@ -141,7 +149,7 @@ Page({
           formData: {
             'user': 'test'
           },
-          success(res) {
+          success: (res) => {
             const data = res.data
             //do something
           }
@@ -151,8 +159,12 @@ Page({
   },
   handleUploadFront() {
     wx.chooseImage({
-      success(res) {
-        const tempFilePaths = res.tempFilePaths
+      count: 1,
+      success: (res) => {
+        const tempFilePaths = res.tempFilePaths;
+        this.setData({
+          front: res.tempFilePaths[0]
+        });
         wx.uploadFile({
           url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
           filePath: tempFilePaths[0],
@@ -160,7 +172,7 @@ Page({
           formData: {
             'user': 'test'
           },
-          success(res) {
+          success: (res) => {
             const data = res.data
             //do something
           }
@@ -170,8 +182,12 @@ Page({
   },
   handleUploadReverse() {
     wx.chooseImage({
-      success(res) {
-        const tempFilePaths = res.tempFilePaths
+      count: 1,
+      success: (res) => {
+        const tempFilePaths = res.tempFilePaths;
+        this.setData({
+          reverse: res.tempFilePaths[0]
+        });
         wx.uploadFile({
           url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
           filePath: tempFilePaths[0],
@@ -179,7 +195,7 @@ Page({
           formData: {
             'user': 'test'
           },
-          success(res) {
+          success: (res) => {
             const data = res.data
             //do something
           }

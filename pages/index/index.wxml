@@ -36,7 +36,7 @@
    <view>￥ 16.66</view>
 </view>
 <view class="card">
-  <view wx:for="{{6}}" class="row" style="border-bottom:{{index==7?'none':'1px solid #eeeeee'}}">
+  <view wx:for="{{6}}" wx:key="key" class="row" style="border-bottom:{{index==7?'none':'1px solid #eeeeee'}}">
     <view>12:00-13:00</view>
     <view>￥123</view>
   </view>
@@ -49,7 +49,7 @@
    <view>￥ 16.66</view>
 </view>
 <view class="card">
-  <view wx:for="{{6}}" class="row" style="border-bottom:{{index==7?'none':'1px solid #eeeeee'}}">
+  <view wx:for="{{6}}" wx:key="key" class="row" style="border-bottom:{{index==7?'none':'1px solid #eeeeee'}}">
     <view>12:00-13:00</view>
     <view>￥123</view>
   </view>
