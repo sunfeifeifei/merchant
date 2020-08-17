@@ -2,16 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/equipment/equipment",
-    
     "pages/profitDetail/profitDetail",
     "pages/profit/profit",
     "pages/center/center",
     "pages/popularize/popularize",
     "pages/logs/logs",
     "pages/message/message",
-    
     "pages/withdrawal/withdrawal"
-    
   ],
   "tabBar": {
     "selectedColor": "#625fdb",

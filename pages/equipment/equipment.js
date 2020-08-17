@@ -6,6 +6,8 @@ Page({
    */
   data: {
     showModalStatus: false,
+    showModalStatus1: false,
+    selectIndex:0,
     list:[
       {
         number:'52857485',
@@ -25,7 +27,19 @@ Page({
       }
     ],
   },
-  
+
+  hnadleItem(e){
+    console.log(e.currentTarget.dataset);
+    this.setData({
+      selectIndex: e.currentTarget.dataset.index
+    });
+  },
+
+
+  handleMaintain(){
+    this.util1(this, 'open');
+  },
+
 
   handleSetter(e) {
     console.log('--当前点击--', e.currentTarget.dataset.item);
@@ -34,6 +48,10 @@ Page({
 
   powerDrawer() {
     this.util(this, 'close');
+  },
+
+  powerDrawer1() {
+    this.util1(this, 'close');
   },
 
   //模态框动画
@@ -61,6 +79,35 @@ Page({
     if (currentStatu == "open") {
       that.setData({
         showModalStatus: true
+      });
+    }
+  },
+
+  //模态框动画
+  util1(that, currentStatu) {
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: "ease-in-out",
+      delay: 0
+    });
+    animation.opacity(0).scale(0).step();
+    that.setData({
+      animationData: animation.export()
+    })
+    setTimeout(function () {
+      animation.opacity(1).scale(1).step();
+      that.setData({
+        animationData: animation
+      })
+      if (currentStatu == "close") {
+        that.setData({
+          showModalStatus1: false
+        });
+      }
+    }.bind(that), 200)
+    if (currentStatu == "open") {
+      that.setData({
+        showModalStatus1: true
       });
     }
   },

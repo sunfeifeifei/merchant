@@ -1,5 +1,5 @@
 <!--pages/equipment/equipment.wxml-->
-<view wx:for="{{list}}" class="card">
+<view wx:for="{{list}}" wx:key='key' class="card">
   <view class="item">
     <text>设备编号</text>{{item.number}}
     <view style="flex:1"></view>
@@ -11,26 +11,30 @@
   </view>
   <view class="item" style="align-items: flex-start">
     <view style="flex:1;line-height:52rpx">
-      <view><text>设备质保</text>{{item.warrantyTime}}</view>
-      <view><text>设备状态</text>{{item.status}}</view>
-      <view><text>注册时间</text>{{item.register}}</view>
-      <view><text>活跃时长</text>{{item.activeDuration}}小时</view>
+      <view>
+        <text>设备质保</text>{{item.warrantyTime}}</view>
+      <view>
+        <text>设备状态</text>{{item.status}}</view>
+      <view>
+        <text>注册时间</text>{{item.register}}</view>
+      <view>
+        <text>活跃时长</text>{{item.activeDuration}}小时</view>
     </view>
     <image mode="widthFix" class="bg" src="./../../images/bg2.jpg"></image>
-  </view>  
+  </view>
 </view>
 <view class="card addimg">
   <image class="img" src="./../../images/add_g.png"></image>
   <view>添加新设备</view>
 </view>
-<view class="card setterimg">
+<view catchtap="handleMaintain" class="card setterimg">
   <image class="img" src="./../../images/setter.png"></image>
   <view>设备维护</view>
 </view>
 <view style="height:40rpx;"></view>
 
 
-<!-- 模态框  -->
+<!-- 模态框(设备报修)  -->
 <!--mask-->
 <view class="drawer_screen1" bindtap="powerDrawer" wx:if="{{showModalStatus}}"></view>
 <!--content-->
@@ -51,5 +55,45 @@
     <view style="font-size:26rpx;color:#999999;text-align: center;padding:50rpx 0">
       您的设备报修申请已经提交，我们将尽快安排线下维护人员与您联系，请耐心等待
     </view>
+  </view>
+</view>
+
+<!-- 模态框(设备维护)  -->
+<!--mask-->
+<view class="drawer_screen1" bindtap="powerDrawer1" wx:if="{{showModalStatus1}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box1" wx:if="{{showModalStatus1}}">
+  <!--drawer content-->
+  <view class="drawer_content2">
+    <view class="title1">
+      <view style="width:40rpx;"></view>
+      <view style="flex:1">
+        选择维护设备
+      </view>
+      <image bindtap="powerDrawer1" style="width:40rpx;height:40rpx" src="./../../images/my-setter-del.png"></image>
+    </view>
+    <view catchtap="hnadleItem" data-item="{{item}}" data-index="{{index}}" class="my-setter-card" wx:for="{{list}}" wx:key='key'>
+      <image style="width:180rpx;height:180rpx" src="./../../images/my_setter_bg.png"></image>
+      <view style="flex:1">
+        <view>
+          <view style="color:#a7a5ef">设备编号：</view>
+          <view>{{item.number}}</view>
+        </view>
+        <view style="height:20rpx;"></view>
+        <view>
+          <view style="color:#a7a5ef">设备地址：</view>
+          <view>{{item.address}}</view>
+        </view>
+      </view>
+      <image style="width:40rpx;height:40rpx;margin-right:10rpx;" src="{{selectIndex==index?'./../../images/my_select.png':'./../../images/my_unselect.png'}}"></image>
+    </view>
+    
+    <view style="font-size:26rpx;color:#666666;text-align: center;padding:40rpx 0">
+      根据您所维护的设备信息，数据将尽快完成转换，请您耐心等待
+    </view>
+
+    <view class="my-setter-btn">确定</view>
+
   </view>
 </view>

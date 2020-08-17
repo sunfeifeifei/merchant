@@ -49,6 +49,29 @@ text{
   justify-content: center;
 }
 
+
+.my-setter-card{
+  background: #6764e8;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #ffffff;
+  margin-bottom: 14rpx;
+  border-radius: 12rpx;
+  padding: 30rpx 10rpx;
+}
+.my-setter-btn{
+  width: 400rpx;
+  text-align: center;
+  height: 66rpx;
+  line-height: 66rpx;
+  background: #6764e8;
+  color: #ffffff;
+  border-radius: 50px;
+  margin: 0 auto 30rpx auto;
+  font-size: 28rpx;
+}
+
 /*mask*/  
 .drawer_screen1 {  
   width: 100%;  
@@ -71,6 +94,13 @@ text{
   z-index: 1001;  
   /* background: #FFFFFF;   */
   margin: -150px 50rpx 0 50rpx;  
+} 
+.drawer_content2 { 
+  border-radius: 20rpx;
+  background-size: cover; 
+  padding:0rpx 20rpx 20rpx 20rpx;
+  background: #ffffff;
+
 }  
 .drawer_content1 { 
   border-radius: 20rpx;
@@ -115,4 +145,14 @@ text{
   font-weight: 600;
   text-align: center;
   padding: 50rpx 0;
+}
+
+.title1{
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 600;
+  text-align: center;
+  padding: 30rpx 0;
+  display: flex;
+  align-items: center;
 }
