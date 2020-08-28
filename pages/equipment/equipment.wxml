@@ -73,6 +73,8 @@
       </view>
       <image bindtap="powerDrawer1" style="width:40rpx;height:40rpx" src="./../../images/my-setter-del.png"></image>
     </view>
+    <!--  -->
+    <scroll-view scroll-y style="height:500rpx">
     <view catchtap="hnadleItem" data-item="{{item}}" data-index="{{index}}" class="my-setter-card" wx:for="{{list}}" wx:key='key'>
       <image style="width:180rpx;height:180rpx" src="./../../images/my_setter_bg.png"></image>
       <view style="flex:1">
@@ -88,7 +90,9 @@
       </view>
       <image style="width:40rpx;height:40rpx;margin-right:10rpx;" src="{{selectIndex==index?'./../../images/my_select.png':'./../../images/my_unselect.png'}}"></image>
     </view>
-    
+    </scroll-view>
+    <!--  -->
+
     <view style="font-size:26rpx;color:#666666;text-align: center;padding:40rpx 0">
       根据您所维护的设备信息，数据将尽快完成转换，请您耐心等待
     </view>
