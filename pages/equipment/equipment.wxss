@@ -156,3 +156,20 @@ text{
   display: flex;
   align-items: center;
 }
+input{
+  background: #ebebeb;
+  width: 160rpx;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+}
+textarea{
+  background: #ebebeb;
+  width: 100%;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  height: 200rpx;
+  padding:10rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #333333;
+}

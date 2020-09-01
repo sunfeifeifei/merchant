@@ -23,7 +23,7 @@
     <image mode="widthFix" class="bg" src="./../../images/bg2.jpg"></image>
   </view>
 </view>
-<view class="card addimg">
+<view catchtap="handleAdd" class="card addimg">
   <image class="img" src="./../../images/add_g.png"></image>
   <view>添加新设备</view>
 </view>
@@ -55,6 +55,26 @@
     <view style="font-size:26rpx;color:#999999;text-align: center;padding:50rpx 0">
       您的设备报修申请已经提交，我们将尽快安排线下维护人员与您联系，请耐心等待
     </view>
+  </view>
+</view>
+
+<!-- 模态框(添加设备)  -->
+<!--mask-->
+<view class="drawer_screen1" bindtap="powerDrawer2" wx:if="{{showModalStatus2}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box1" wx:if="{{showModalStatus2}}">
+  <!--drawer content-->
+  <view class="drawer_content1" style="box-sizing: border-box;padding:52rpx">
+    <view class="title" style="padding:20rpx 0 50rpx 0;">输入设备地址</view>
+    <view class="detail-row" style="padding: 10rpx 0;display:flex;align-items: center;">
+      <input bindinput="handleInputProvince"></input>
+      <view class="detail-value" style="width:60rpx;margin-left:20rpx">省</view>
+      <input bindinput="handleInputCity"></input>
+      <view class="detail-value" style="width:60rpx;margin-left:20rpx">市</view>
+    </view>
+    <textarea bindinput="handleInputAddress"></textarea>
+    <view class="my-setter-btn">确定</view>
   </view>
 </view>
 

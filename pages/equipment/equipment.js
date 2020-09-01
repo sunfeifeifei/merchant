@@ -5,8 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    province:'',
+    city:'',
+    address:'', 
+
     showModalStatus: false,
     showModalStatus1: false,
+    showModalStatus2: false,
     selectIndex:0,
     list:[
       {
@@ -51,11 +56,27 @@ Page({
     });
   },
 
+  handleInputProvince(e){
+    console.log('--省--',e.detail.value);
+    this.data.province = e.detail.value;
+  },
+  handleInputCity(e) {
+    console.log('--市--', e.detail.value); 
+    this.data.city = e.detail.value;
+  },
+  handleInputAddress(e) {
+    console.log('--地址--', e.detail.value); 
+    this.data.address = e.detail.value;
+  },
+
 
   handleMaintain(){
     this.util1(this, 'open');
   },
-
+  
+  handleAdd(){
+    this.util2(this, 'open');
+  },
 
   handleSetter(e) {
     console.log('--当前点击--', e.currentTarget.dataset.item);
@@ -68,6 +89,10 @@ Page({
 
   powerDrawer1() {
     this.util1(this, 'close');
+  },
+
+  powerDrawer2() {
+    this.util2(this, 'close');
   },
 
   //模态框动画
@@ -124,6 +149,35 @@ Page({
     if (currentStatu == "open") {
       that.setData({
         showModalStatus1: true
+      });
+    }
+  },
+
+  //模态框动画
+  util2(that, currentStatu) {
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: "ease-in-out",
+      delay: 0
+    });
+    animation.opacity(0).scale(0).step();
+    that.setData({
+      animationData: animation.export()
+    })
+    setTimeout(function () {
+      animation.opacity(1).scale(1).step();
+      that.setData({
+        animationData: animation
+      })
+      if (currentStatu == "close") {
+        that.setData({
+          showModalStatus2: false
+        });
+      }
+    }.bind(that), 200)
+    if (currentStatu == "open") {
+      that.setData({
+        showModalStatus2: true
       });
     }
   },
